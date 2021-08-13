@@ -878,6 +878,11 @@ span {
   background: linear-gradient(to bottom, #666666, #333333);
   padding: 60px 0 24px;
 
+  @include mq('sp') {
+    padding-top: 40px;
+    padding-bottom: 18px;
+  }
+
 }
 
 .footer__inner {
@@ -886,10 +891,18 @@ span {
 
 .footer__content {
   display: flex;
+
+  @include mq('sp') {
+    display: block;
+  }
 }
 
 .footer__company {
   width: 30%;
+
+  @include mq('sp') {
+    width: 100%;
+  }
 }
 
 .footer__logo {
@@ -901,6 +914,10 @@ span {
 
 .footer__address {
   margin-top: 32px;
+
+  @include mq('sp') {
+    margin-top: 18px;
+  }
   p {
     display: block;
     font-size: 14px;
@@ -912,6 +929,11 @@ span {
 .footer__nav {
   width: 45%;
   margin: 0 auto;
+
+  @include mq('sp') {
+    width: 100%;
+    margin-top: 32px;
+  }
 }
 
 .footer__nav__lists {
@@ -921,6 +943,10 @@ span {
   li {
     &:not(:first-child) {
       margin-left: 40px;
+
+      @include mq('sp') {
+        margin-left: 20px;
+      }
     }
     a {
       text-decoration: none;
@@ -931,10 +957,20 @@ span {
   
 .footer__sns-link {
   width: 25%;
+
+  @include mq('sp') {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .footer__sns__items {
   text-align: right;
+
+  @include mq('sp') {
+    text-align: center;
+  }
+
   li {
     display: inline-block;
     &:not(:first-child) {
@@ -957,12 +993,27 @@ span {
 }
 
 .totop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  @include mq('sp') {
+    right: 12px;
+    bottom: 12px;
+  }
+
   a {
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
+    text-decoration: none;
+
+    img {
+      width: 60px;
+      height: 60px;
+
+      @include mq('sp') {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
